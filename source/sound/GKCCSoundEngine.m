@@ -20,12 +20,12 @@ static id __soundEngine = nil;
 
 @end
 
-@implementation IDPGKSoundEngine
+@implementation GKCCSoundEngine
 
 #pragma mark -
 #pragma mark Class methods
 
-+ (IDPGKSoundEngine *)sharedSoundEngine {
++ (GKCCSoundEngine *)sharedSoundEngine {
     static dispatch_once_t __soundEngineOnceToken;
     dispatch_once(&__soundEngineOnceToken, ^{
         __soundEngine = [[self alloc] init];

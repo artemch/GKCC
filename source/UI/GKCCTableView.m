@@ -6,7 +6,7 @@
 //  Copyright 2014 Apportable. All rights reserved.
 //
 
-#import "IDPCCTableView.h"
+#import "GKCCTableView.h"
 
 @interface GKCCTableView ()
 

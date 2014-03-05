@@ -20,7 +20,7 @@ static NSString *const kIDPGKSounds          = @"sounds";
 /** Pauses effects playback */
 @property(nonatomic,readwrite,assign, getter = isEffectsPaused) BOOL effectsPaused;
 
-+ (IDPGKSoundEngine *)sharedSoundEngine;
++ (GKCCSoundEngine *)sharedSoundEngine;
 
 - (BOOL)preloadBackground;
 - (void)preloadEffects;
