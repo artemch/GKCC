@@ -10,8 +10,6 @@
 #import "NSObject+IDPExtensions.h"
 #import "NSBundle+GKCCExtension.h"
 
-static NSString *const kFSLeaderboardId = @"com.idap.flappysmasher.score";
-
 static id __gameDirector = nil;
 
 @interface GKCCGameDirector ()
@@ -56,7 +54,6 @@ static id __gameDirector = nil;
     if (self) {
         self.user = [GKCCUserModel object];
         self.gameCenter = [GKCCGameCenter object];
-        self.gameCenter.leaderboardIdentifier = kFSLeaderboardId;
         self.soundEngine = [GKCCSoundEngine sharedSoundEngine];
         NSDictionary *dictionary = [NSBundle plistForName:kFSSound];
         if (dictionary) {
