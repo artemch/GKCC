@@ -28,7 +28,6 @@
 
 + (id)sharedCenterManager;
 + (BOOL)isGameCenterAvailable;
-- (void)authenticateLocalUser;
 
 - (void)loadLeaderboardForIdentifier:(NSString *)identifier;
 - (void)loadScoresForCurrentLeaderboardWithRange:(NSRange)range;

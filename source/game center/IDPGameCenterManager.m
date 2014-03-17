@@ -59,16 +59,6 @@
     return NO;
 }
 
-
-- (void)authenticateLocalUser {
-	if([GKLocalPlayer localPlayer].authenticated == NO)	{
-		[[GKLocalPlayer localPlayer] authenticateWithCompletionHandler:^(NSError *error) {
-             [self notifyObserversOnMainThreadWithSelector:@selector(gameCenderDidAuthenticateWithError:) userInfo:error];
-        }];
-	}
-    self.currentPlayer = [GKLocalPlayer localPlayer];
-}
-
 - (void)authenticateLocalUserWithRootViewController:(UIViewController *)rootViewController {
     GKLocalPlayer *localPlayer = [GKLocalPlayer localPlayer];
     localPlayer.authenticateHandler =
