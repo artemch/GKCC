@@ -10,6 +10,8 @@
 #import "NSObject+IDPExtensions.h"
 #import "NSBundle+GKCCExtension.h"
 
+static NSString *const kSound = @"Sound";
+
 static id __gameDirector = nil;
 
 @interface GKCCGameDirector ()
@@ -55,7 +57,7 @@ static id __gameDirector = nil;
         self.user = [GKCCUserModel object];
         self.gameCenter = [GKCCGameCenter object];
         self.soundEngine = [GKCCSoundEngine sharedSoundEngine];
-        NSDictionary *dictionary = [NSBundle plistForName:kFSSound];
+        NSDictionary *dictionary = [NSBundle plistForName:kSound];
         if (dictionary) {
             [self.soundEngine setSoundsFromDictionary:dictionary];
             [self.soundEngine preloadBackground];
