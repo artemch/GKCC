@@ -111,11 +111,13 @@
 
 - (void)loadLeaderboardForIdentifier:(NSString *)identifier {
     [GKLeaderboard loadLeaderboardsWithCompletionHandler:^(NSArray *leaderboards, NSError *error) {
+        NSInteger index = 0;
         for (GKLeaderboard *leaderboard in leaderboards) {
             if ([leaderboard.identifier isEqualToString:identifier]) {
-                self.currentLeaderBoard = [leaderboards firstObject];
+                self.currentLeaderBoard = [leaderboards objectAtIndex:index];
                 break;
             }
+            index++;
         }
         [self notifyObserversOnMainThreadWithSelector:@selector(gameCenterDidLeaderboardLoadWithError:) userInfo:error];
     }];
